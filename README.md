@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # PG6301 EKSAMEN
 
 Heroku:
