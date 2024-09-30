@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #ffe0e9;
+  color: #333;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+main {
+  background-color: white;
+  margin: 1rem auto;
+  min-width: 80%;
+  max-width: 500px;
+  padding: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header,
+footer {
+  padding: 1em;
+}
+
+.errorMessage {
+  color: red;
+  padding: 0.5em;
+  border: 1px solid red;
+  margin: 1em;
+  border-radius: 0.25em;
+}
+.chat-container {
+  border: 2px solid #ffb6c1; /* Lett rosa border */
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1em 0;
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: #fff5f8;
+}
+
+.message {
+  background-color: #ffc3d1; /* Litt mørkere rosa for meldingene */
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border-radius: 8px;
+  word-wrap: break-word; /* Sikrer at lange ord brytes korrekt */
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  border: 2px solid #ffb6c1;
+  border-radius: 8px;
+}
+
+.send-button {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  background-color: #ffb6c1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #ff91a4; /* Mørkere rosa ved hovering */
+}
+
+.login-button {
+  color: black;
+  border: 4px solid #ff91a4;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #ff91a4;
+  border-color: #aa336a;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffb6c1;
+}
+
+.login-content {
+  text-align: center;
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-heading {
+  font-size: 24px;
+  color: #333;
+}
+
+.login-subtext {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.user-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* juster avstanden mellom knappene */
+  margin-top: 20px; /* gi litt plass på toppen */
+}
+
+.profile-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f765a3;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.logout-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f44336; /* en fin rød farge */
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Endre farge ved hover for bedre brukeropplevelse */
+.profile-button:hover {
+  background-color: #77dd77;
+  color: #333333;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}
+
+.user-profile {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.user-profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.user-profile h1 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.user-profile p {
+  color: #666;
+}
+
+.back-to-chat-button,
+.logout-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.back-to-chat-button {
+  background-color: #f765a3;
+  color: white;
+}
+
+.logout-button {
+  background-color: #a00b24;
+  color: white;
+}
+
+.back-to-chat-button:hover {
+  background-color: #77dd77;
+  color: #333333;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}
+
+.chatroom-list {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.chatroom-title {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.chatroom-buttons {
+  margin-bottom: 20px;
+}
+
+.chatroom-button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.chatroom-button:hover {
+  background-color: #45a049;
+}
+
+.chatroom-create {
+  margin-top: 20px;
+}
+
+.chatroom-input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.chatroom-create-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #008cba;
+  color: white;
+  cursor: pointer;
+}
+
+.chatroom-create-button:hover {
+  background-color: #007b9e;
+}
+
+.chatroom-error {
+  color: red;
+  margin-top: 10px;
+}
+
+.back-to-home-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f765a3;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.back-to-home-button:hover {
+  background-color: #77dd77;
+  color: #333333;
+}
+
+@media (max-width: 600px) {
+  main {
+    min-width: 90%;
+  }
+}

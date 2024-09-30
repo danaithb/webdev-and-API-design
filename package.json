@@ -1,0 +1,72 @@
+{
+  "name": "pg6301exam23",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4",
+    "ws": "^8.14.2"
+  },
+  "scripts": {
+    "start": "cd server && npm start",
+    "build": "npm run build:client",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev": "concurrently npm:dev:client npm:dev:server",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "postinstall": "npm run install:client && npm run install:server",
+    "install:client": "cd client && npm install --include=dev",
+    "install:server": "cd server && npm install --include=dev",
+    "build:client": "cd client && npm run build",
+    "check:prettier": "prettier --check ."
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
+    "babel-jest": "^29.7.0",
+    "concurrently": "^8.2.2",
+    "jest": "^27.5.1",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.1.0",
+    "parcel": "^2.3.2",
+    "react-test-renderer": "^18.2.0"
+  },
+  "engines": {
+    "node": "18.17.1"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
