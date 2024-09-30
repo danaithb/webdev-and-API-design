@@ -64,6 +64,3 @@ Kreves for A/B:
 🟩 Brukere skal forbli logget inn når de refresher websiden.
 
 🟩 Alle feil fra serveren skal presenteres for brukeren på en pen måte, med mulighet for brukeren til å prøve igjen.
-=======
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/pgC2zHhI)
->>>>>>> 04e0b2fd67358c4be6bb25fec4236d4bb521baf8
